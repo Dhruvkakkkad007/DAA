@@ -54,7 +54,7 @@ void change(int pos, int val)
     }
     else
     {
-        stack[top] = val;
+        stack[i] = val;
         printf("Changed\n");
     }
 }
