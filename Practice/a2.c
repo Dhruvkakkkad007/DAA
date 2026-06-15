@@ -3,16 +3,15 @@
 
 struct  Node
 {
-   
+
     int data;
     struct Node *link;
 };
 
 struct Node *head = NULL;
 
-
 void insert(int val){
-    
+
     struct Node *newNode,*save;
 
     newNode =  (struct Node *)malloc(sizeof(struct Node));
@@ -46,7 +45,6 @@ void delete(){
 
     head =  head->link;
 
-
     free(save);
 }
 
@@ -68,10 +66,19 @@ int main(){
     insert(30);
 
     display();
-    
+
     delete();
 
     display();
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
