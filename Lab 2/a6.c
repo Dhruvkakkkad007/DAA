@@ -1,68 +1,95 @@
+//using Two Loops
+
+// #include <stdio.h>
+// void main()
+// {
+//     int n, flag = 0;
+
+//     printf("Enter n:");
+//     scanf("%d", &n);
+
+//     int sum = 0;
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         sum = sum + i;
+
+//         for (int j = i; j < n; j++)
+//         {
+
+//             if (sum == n)
+//             {
+//                 flag = 1;
+//                 break;
+//             }
+
+//             if (sum > n)
+//             {
+//                 break;
+//             }
+//         }
+//         if (flag)
+//         {
+//             break;
+//         }
+//     }
+
+//     if (flag)
+//     {
+//         printf("True");
+//     }
+//     else
+//     {
+//         printf("False");
+//     }
+// }
+
+
+
+
+//using One Loop
 #include <stdio.h>
+
 void main()
 {
-    int n, flag = 0;
-
-    printf("Enter n:");
+    int n;
+    printf("Enter n: ");
     scanf("%d", &n);
 
-    int sum = 0;
+    int l = 1, r = 1;
+    int sum = 1;
+    int found = 0;
 
-    for (int i = 0; i < n; i++)
+    while( l <= n / 2)
     {
-        sum = sum + i;
-
-        for (int j = i; j < n; j++)
+        if (sum < n)
         {
-
-            if (sum == n)
-            {
-                flag = 1;
-                break;
-            }
-
-            if (sum > n)
-            {
-                break;
-            }
+            r++;
+            sum += r;
         }
-        if (flag)
+        else if (sum > n)
         {
+            sum -= l;
+            l++;
+        }
+        else
+        {
+            found = 1;
+            printf("True\n");
+
+            for (int i = l; i <= r; i++)
+            {
+                printf("%d", i);
+
+                if (i < r)
+                    printf(" + ");
+            }
+
+            printf(" = %d", n);
             break;
         }
     }
 
-    if (flag)
-    {
-        printf("True");
-    }
-    else
-    {
+    if (!found)
         printf("False");
-    }
-}
-
-#include <stdio.h>
-void main()
-{
-    int n;
-    printf("Enter n:");
-    scanf("%d", &n);
-
-    int l = 0;
-    int r = 0;
-    int sum = 0;
-    for (int i = 0; i < n / 2; i++)
-    {
-
-        if (sum < n)
-        {
-            sum = sum + i;
-        }
-
-        if (sum > n)
-        {
-            sum = sum - l;
-        }
-    }
 }
