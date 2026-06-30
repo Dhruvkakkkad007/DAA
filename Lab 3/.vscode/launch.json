@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/SEM 5/DAA/Lab 4",
-      "program": "d:/SEM 5/DAA/Lab 4/build/Debug/outDebug",
+      "cwd": "d:/SEM 5/DAA/Lab 3",
+      "program": "d:/SEM 5/DAA/Lab 3/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
